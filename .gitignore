@@ -1,6 +1,6 @@
-hybris/bin/platform
-hybris/log
-hybris/temp
+hybris/bin/platform/*
+hybris/log/*
+hybris/temp/*
 hybris-*
 *.class
 gensrc
