@@ -1,0 +1,9 @@
+#Ant properties
+#Thu Feb 19 01:25:17 CET 2015
+builddate=20150219 0125
+description=entitlementcockpits
+name=entitlementcockpits
+releasedate=20141113 1921
+vendor=hybris
+version=5.4.0.0
+version.api=5.4.0

@@ -1,0 +1,44 @@
+<configuration>
+  
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d [%-5level][%t][%c] %m%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>../logs/datahub.log</file>
+        <encoder>
+            <Pattern>%d [%-5level][%t][%c] %m%n</Pattern>
+        </encoder>
+    </appender>
+  
+
+        <logger name="javax.validation" level="info" />
+
+        <logger name="org.springframework.beans.factory" level="warn"/>
+        <logger name="org.springframework.transaction" level="info" />
+        <logger name="org.springframework.validation" level="info" />
+
+        <logger name="com.hybris.kernel.services.aggregation" level="info" />
+		<logger name="com.hybris.kernel" level="info" />
+		<logger name="com.hybris.kernel.typesystem" level="info" />
+		<!--logger name="com.hybris.kernel.engine.jdbc" level="trace" /-->
+		<logger name="com.hybris.kernel.utils.SystemInformationLogger" level="info" />
+		<logger name="com.hybris.datahub" level="debug" />
+		
+        <logger name="org.jgroups.protocols" level="error"/>
+
+       	<root level="warn">
+        	<appender-ref ref="STDOUT" level="info"/>
+        	<appender-ref ref="FILE" level="debug"/>
+   		</root>
+   		
+   		<root level="debug">
+        	<appender-ref ref="STDOUT" level="info"/>
+        	<appender-ref ref="FILE" level="debug"/>
+   		</root>
+
+        <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        	<resetJUL>true</resetJUL>
+        </contextListener>
+</configuration>

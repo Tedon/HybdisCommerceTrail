@@ -1,0 +1,9 @@
+#Ant properties
+#Fri May 15 20:47:39 CEST 2015
+builddate=20150515 2047
+description=omsbackoffice
+name=omsbackoffice
+releasedate=20141017 1706
+vendor=hybris
+version=5.4.0.0
+version.api=5.4.0

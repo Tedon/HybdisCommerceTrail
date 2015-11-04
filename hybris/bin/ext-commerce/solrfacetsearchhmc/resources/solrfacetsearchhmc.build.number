@@ -1,0 +1,9 @@
+#Ant properties
+#Tue Jan 13 10:47:35 CET 2015
+builddate=20150113 1047
+description=solrfacetsearchhmc
+name=solrfacetsearchhmc
+releasedate=20141219 1328
+vendor=hybris
+version=5.4.0.0
+version.api=5.4.0

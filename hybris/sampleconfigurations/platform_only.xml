@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hybrisconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="resources/schemas/extensions.xsd">
+	<extensions>
+
+		<path dir="${HYBRIS_BIN_DIR}" />
+										
+		<extension name="admincockpit" />
+		<extension name="backoffice" />
+		<extension name="cockpit" />
+		<extension name="hmc" />
+		<extension name="mcc" />
+		<extension name="platformhmc" />
+		<extension name="ldap" />
+		<extension name="lucenesearch" />
+		<extension name="lucenesearchhmc" />
+		<extension name="mediaconversion" />
+		<extension name="platformwebservices" />
+		<extension name="reportcockpit" />
+		<extension name="tomcatembeddedserver" />
+		<extension name="virtualjdbc" />
+				
+		<extension name="hybrisdatasupplier" />
+	</extensions>
+</hybrisconfig>

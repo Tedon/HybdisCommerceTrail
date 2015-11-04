@@ -1,0 +1,9 @@
+#Ant properties
+#Wed Aug 05 09:21:06 CEST 2015
+builddate=20150805 0921
+description=backoffice
+name=backoffice
+releasedate=20150326 1326
+vendor=hybris
+version=5.4.0.2
+version.api=5.4.0

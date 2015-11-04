@@ -1,0 +1,9 @@
+#Ant properties
+#Mon Aug 10 16:10:09 CEST 2015
+builddate=20150810 1610
+description=sapordermgmtb2bservices
+name=sapordermgmtb2bservices
+releasedate=20150805 1512
+vendor=hybris
+version=5.4.0.5
+version.api=5.4.0
