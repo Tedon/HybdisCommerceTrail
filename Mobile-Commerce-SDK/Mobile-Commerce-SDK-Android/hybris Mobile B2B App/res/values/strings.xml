@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hybris Mobile B2B App</string>
+    <string name="signin_text_button">SIGN IN</string>
+    <string name="signin_email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="product_img_description">Product Image</string>
+    <string name="login_img_description">b2b app login</string>
+    <string name="splash_img_description">hybris logo</string>
+
+    <!-- General -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="error_title">Error</string>
+
+    <!-- Products list -->
+    <string name="products_not_found_search_request">Your search %1$s did not match any products. Try searching again or browse the categories.</string>
+    <string name="products_not_found">No products found</string>
+    <string name="products_search_header_searched">Searched:</string>
+    <string name="products_search_header_did_you_mean">Did you mean:</string>
+    <string name="products_search_header_nb_results">%1$s Results</string>
+    <string name="product_item_name">Product Name</string>
+    <string name="product_item_low_stock">Low Stock</string>
+    <string name="product_item_stock">in stock</string>
+    <string name="product_item_image_expanded">Product Image Expanded</string>
+
+    <!-- Cart -->
+    <string name="cart_menu_continue_shopping">Continue Shopping</string>
+    <string name="cart_menu_checkout">CHECKOUT</string>
+    <string name="cart_menu_shopping_cart_title">Shopping Cart</string>
+    <string name="cart_menu_shopping_cart_id">CART ID: %1$s</string>
+    <string name="cart_menu_empty">Your cart is empty</string>
+    <string name="cart_menu_products_header_items">ITEMS</string>
+    <string name="cart_menu_products_header_quantity">QTY</string>
+    <string name="cart_menu_products_header_total">TOTAL</string>
+    <string name="cart_menu_products_header_swipe_hint">Swipe over item to remove from cart</string>
+    <string name="cart_menu_delete_item_confirmation_title">Are you sure you would like to remove this item from your cart?</string>
+    <string name="cart_menu_delete_item_cancel_button">Cancel</string>
+    <string name="cart_menu_delete_item_remove_button">DELETE</string>
+
+    <!-- Cart actions -->
+    <string name="cart_delete_item_confirm_message">Item successfully removed</string>
+    <string name="cart_update_item_confirm_message">Item successfully updated</string>
+
+    <!-- Catalog Content -->
+    <string name="catalog_content_breadcrumb">\u003C\u0020Catalog\u0020\u002F\u0020</string>
+    <string name="catalog_content_header_view_type">view type</string>
+    <string name="catalog_content_header_line_view">Line View</string>
+    <string name="catalog_content_header_list_view">List View</string>
+    <string name="catalog_content_header_grid_view">Grid View</string>
+
+    <!-- Main menu (Drawer) Items -->
+    <string name="main_menu_item_dashboard">Dashboard</string>
+    <string name="main_menu_item_orders">Orders</string>
+    <string name="main_menu_item_catalog">Catalog</string>
+    <string name="main_menu_item_account">Account</string>
+    <string name="main_menu_item_logout">Logout</string>
+    <string name="main_menu_open">Open navigation drawer</string>
+    <string name="main_menu_close">Close navigation drawer</string>
+    <string name="search_product_hint">Search products</string>
+
+    <!-- Product Details -->
+    <string name="product_detail_order_form">order form</string>
+    <string name="product_detail_exit">quit product page</string>
+    <string name="product_detail_volume_pricing"><u>Volume Pricing</u></string>
+    <string name="product_detail_in_stock">in stock</string>
+    <string name="product_detail_volume_price">Price</string>
+    <string name="product_detail_volume_qty">QTY</string>
+    <string name="product_detail_add_to_cart">ADD TO CART</string>
+    <string name="product_detail_expandable_delivery">DELIVERY</string>
+    <string name="product_detail_expandable_prod_detail">PRODUCT DETAILS</string>
+    <string name="choose_variant">Choose a %1$s</string>
+
+    <!-- Checkout -->
+    <string name="checkout">Checkout</string>
+    <string name="checkout_place_order">PLACE ORDER</string>
+    <string name="checkout_terms_conditions"><u>terms and conditions</u></string>
+    <string name="checkout_agree_text">I have read and agree to the\u0020</string>
+    <string name="checkout_payment_hint">P.O. NUMBER (OPTIONAL)</string>
+    <string name="checkout_payment_title">1. PAYMENT TYPE</string>
+    <string name="checkout_cost_center_title">2. COST CENTER</string>
+    <string name="checkout_delivery_details_title">3. DELIVERY DETAILS</string>
+    <string name="checkout_delivery_address_title">DELIVERY ADDRESS</string>
+    <string name="checkout_delivery_method_title">DELIVERY METHOD</string>
+    <string name="checkout_cost_center_spinner_dialog">Choose a Cost Center</string>
+    <string name="checkout_delivery_method_spinner_dialog">Choose a Delivery Method</string>
+    <string name="checkout_delivery_address_spinner_dialog">Choose a Delivery Address</string>
+    <string name="checkout_payment_number_button_description">For payment by credit card, please visit the <b>%1$s</b></string>
+    <string name="checkout_terms_conditions_error_message">Please read/accept our terms and conditions before submitting your order.</string>
+    <string name="checkout_placing_order_error_message">Please correct the errors above before placing your order.</string>
+    <string name="checkout_placing_order_mandatory_message">Mandatory fields*</string>
+
+    <!-- Order Summary -->
+    <string name="order_summary_title">ORDER SUMMARY</string>
+    <string name="order_summary_items">%1$s items</string>
+    <string name="order_summary_subtotal">Subtotal</string>
+    <string name="order_summary_savings">Savings</string>
+    <string name="order_summary_tax">Tax</string>
+    <string name="order_summary_shipping">Shipping</string>
+    <string name="order_summary_total">Order Total</string>
+    <string name="order_summary_no_taxes">*No taxes are included in the total</string>
+
+    <!-- Cart Summary -->
+    <string name="cart_summary_title">ORDER SUMMARY</string>
+    <string name="cart_summary_items">%1$s items</string>
+    <string name="cart_summary_subtotal">Subtotal</string>
+    <string name="cart_summary_savings">Savings</string>
+    <string name="cart_summary_tax">Tax</string>
+    <string name="cart_summary_shipping">Shipping</string>
+    <string name="cart_summary_total">Order Total</string>
+
+    <!-- Order Confirmation -->
+    <string name="order_confirmation_thank">THANK YOU FOR YOUR ORDER</string>
+    <string name="order_confirmation_img">Ordered items image</string>
+    <string name="order_confirmation_number">Your order number is <b>%1$s</b></string>
+    <string name="order_confirmation_detail">A copy of your order details has been sent to %1$s</string>
+    <string name="order_confirmation_delivery_address_title">Delivery Address</string>
+    <string name="order_confirmation_delivery_method_title">Delivery Method</string>
+    <string name="order_confirmation_qty">QTY %1$s</string>
+
+    <!-- Menu items -->
+    <string name="menu_search">Search</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_feedback">Feedback</string>
+
+</resources>

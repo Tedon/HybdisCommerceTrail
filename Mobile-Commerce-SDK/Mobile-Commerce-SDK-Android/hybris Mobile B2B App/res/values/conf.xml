@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hockeyapp_app_id"></string>
+
+    <integer name="pagesize">20</integer>
+
+    <string name="default_qty">1</string>
+
+    <integer name="grid_portrait_nb_items">3</integer>
+    <integer name="grid_landscape_nb_items">5</integer>
+
+    <bool name="animationOnLoginPage">false</bool>
+    
+    <!-- TODO : Update currency sign for localization -->
+<!--     <string name="default_price">$0.00</string> -->
+
+</resources>

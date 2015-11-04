@@ -1,0 +1,915 @@
+$screen_full_width      = 770;
+
+$margin_group_top       = 45;
+$margin                 = 15;
+
+$component_width        = 350;
+$component_full_width   = 700;
+$component_height       = 60;
+
+$label_height           = 20;
+$label_width            = 400;
+
+$dropdown_button_height = 40;
+$dropdown_button_width  = 210;
+
+$main_text_color_primary     = #0054ae;
+$main_text_color_black       = #000000;
+$main_text_color_gray        = #313949;
+$main_text_color_light_gray  = #b8bec8;
+$main_text_color_white       = #313949;
+$main_background_secondary   = #0054ae;
+$main_background_transparent = #ffffff;
+$main_background_secondary   = #eeeeee;
+$main_background_very_light  = #f0f0f0;
+$main_background_light       = #d3d6db;
+$main_background_dark        = #b8bec8;
+$main_background_strong_dark = #313949;
+$main_background_black       = #000000;
+$main_color_green            = #009933;
+$main_color_red              = #e60000;
+
+$menu_text_default           = #ffffff;
+$menu_background_main        = #223c59;
+$menu_background_default     = #283141;
+$menu_background_selected    = #161b23;
+$menu_border_default         = #ffffff;
+
+//for testing use only
+$black  = #000000;
+$red    = #990000;
+$green  = #009900;
+$blue   = #000099;
+$yellow = #FFFF00;
+$violet = #990099;
+$aqua   = #009999;
+$dark   = #333333;
+$gray   = #999999;
+$white  = #FFFFFF;
+
+$button_background_color_primary     = #fad712;
+$button_background_color_primary_off = #6b97cb;
+$button_secondry_background_color    = #f0f0f0;
+$panel_background_color_secondary    = #ffffff;
+$text_field_background_color         = #316baf;
+$text_field_font_color               = #ffffff;
+$label_background_color              = #ffffff;
+$label_font_color                    = #316baf;
+$background_gradient_start_color     = #013b7f;
+$background_gradient_end_color       = #1c569a;
+
+$font_small         = HelveticaNeue 16;
+$font_small_italic  = HelveticaNeue-Italic 16;
+$font_medium        = HelveticaNeue 18;
+$font_medium_italic = HelveticaNeue-Italic 18;
+$font_medium_bold   = HelveticaNeue-Bold 18;
+$font_large         = HelveticaNeue 32;
+$font_title         = HelveticaNeue-Thin 32;
+$font_subTitle      = HelveticaNeue-Thin 20;
+$font_subSubTitle   = HelveticaNeue-Thin 14;
+
+UITextField.primaryTextfield {
+    size: $component_width $component_height;
+    background-color:$text_field_background_color;
+    margin-top: $margin;
+    text-color: $text_field_font_color;
+    tint-color: $text_field_font_color;
+    UIImageView, UIButton {
+        size: 20 20;
+        tint-color: $text_field_font_color;
+    }
+}
+
+UITextField.secondaryTextfield {
+    size: $component_width/5 $component_height;
+    margin-top: $margin;
+    margin-left:$margin;
+    text-color: $label_font_color;
+    tint-color: $label_font_color;
+    background-color: $main_background_secondary;
+}
+
+UIButton.primaryButton, UIButton.secondaryButton {
+    size: $component_width $component_height;
+    margin-top: $margin;
+}
+UIButton.primaryButton {
+    background-color:$button_background_color_primary;
+    title-color:[state:normal] $main_text_color_primary;
+}
+UIButton.secondaryButton {
+    background-color: $button_secondry_background_color;
+}
+UIButton.dropdownButton {
+    size: $dropdown_button_width $dropdown_button_height;
+    background-color: $main_background_transparent;
+    title-color: $main_text_color_primary;
+    margin-left: $margin;
+    > UIImageView {
+        size: $dropdown_button_width * 0.17 $dropdown_button_height * 0.9;
+        margin-left: $dropdown_button_width * 0.8;
+    }
+}
+UIButton.groupBegin {
+    margin-top: 18;
+}
+UITextField.groupBegin {
+    margin-top: $margin_group_top;
+}
+UIButton.disabled {
+    background-color:$button_background_color_primary_off;
+    title-color:[state:normal] $main_text_color_primary;
+}
+UILabel.textLabel {
+    size: $label_width $label_height;
+    margin-top: $margin;
+    margin-left:$margin;
+    text-color: $label_font_color;
+    background-color:$label_background_color;
+}
+
+UINavigationBar {
+    bar-tint-color: $background_gradient_end_color;
+}
+
+HYBBarButtonItem {
+    badgeTextColor:$label_font_color;
+    badgeBGColor:$button_background_color_primary;
+    badgePadding:10;
+    badgeOriginX:5;
+    badgeOriginY:-10;
+}
+
+UITableView.sideBarMenu {
+    margin-top:100;
+    background-color:$menu_background_default;
+    margin-top: $margin;
+    UITableViewCell {
+       margin-top:10;
+       background-color:$menu_background_default;
+       UILabel {
+           background-color:$menu_background_default;
+           text-color:$menu_text_default;
+       }
+    }
+}
+
+HYBMainMenuView {
+    background-color:$menu_background_default;
+    UIView.menuOption {
+        background-color:$menu_background_default;
+        margin-top:15;
+        size: 160 60;
+        UIImageView {
+          size: 40 40;
+        }
+        UILabel {
+          margin-top:0;
+          margin-left:20;
+          size:120 30;
+          text-color:$menu_text_default;
+          text-alignment:left;
+          font:$font_medium;
+        }
+    }
+    UIView.menuOptionBorder {
+        margin-top:15;
+        size: 240 1;
+        background-color:$menu_border_default;
+    }
+    UIView.option_0 {
+        margin-top:20;
+    }
+    UIView.option_4 {
+        margin-top:570;
+        size: 130 50;
+        UILabel {
+          size:90 30;
+          margin-left:0;
+          background-color:$menu_background_default;
+          text-color:$menu_text_default;
+          text-alignment: center;
+          font:$font_medium;
+        }
+    }
+}
+
+HYBCatalogMenuView {
+    background-color:$menu_background_default;
+    UIView.catalogMenuSpacer {
+    background-color:$menu_background_main;
+        margin:0 0 0 0;
+        size:240 11;
+    }
+    UITableView {
+        margin:0 0 0 0;
+        background-color:$menu_background_default;
+    }
+    UITableViewCell {
+        separatorInset: 0 0 0 0;
+        background-color:$menu_background_default;
+        UILabel[textLabel] {
+            background-color:$menu_background_default;
+            text-color:$menu_text_default;
+            font:$font_medium;
+        }
+    }
+    UITableViewCell.selectedCell {
+        background-color:$menu_background_selected;
+        UILabel[textLabel] {
+            text-color:$menu_text_default;
+            background-color:$menu_background_selected;
+        }
+    }
+    UITableViewCell.mainNavCell {
+        background-color:$menu_background_main;
+        UILabel[textLabel] {
+            text-color:$menu_text_default;
+            background-color:$menu_background_main;
+        }
+    }
+}
+
+UITableView {
+    separatorColor:$main_background_very_light;
+    separatorInset: 0 0 0 0;
+}
+
+HYBCatalogView {
+   background-color:$main_background_very_light;
+   UIView.collapsed {
+       size:$screen_full_width 0;
+   }
+   UIView.expanded {
+       size:$screen_full_width $component_height;
+       background-color:$main_background_very_light;
+   }
+   UIView.search {
+        margin-top: 80;
+        UITextField.searchField {
+            margin-left:$margin;
+            font:$font_large;
+        }
+        UITextField.collapsed {
+            size:$screen_full_width*.96 0;
+        }
+        UITextField.expanded {
+            size:$screen_full_width*.96 50;
+        }
+   }
+   UIView.searchResultPanel {
+       background-color:$main_background_very_light;
+       margin-top: 0;
+       UILabel {
+          background-color:$main_background_very_light;
+          text-color:$main_text_color_primary;
+          font:$font_medium;
+       }
+       UILabel.searchResultLeft {
+          margin-left:$margin;
+          font:$font_large;
+       }
+       UILabel.searchResultRight {
+          margin-left:$margin*3;
+       }
+       UILabel.collapsed {
+           size:$screen_full_width*.45 0;
+       }
+       UILabel.expanded {
+           size:$screen_full_width*.45 50;
+       }
+   }
+   UIView.didYouMeanPanel {
+       margin-top: 0;
+       HYBCustButton.didYouMeanLabel {
+             margin-left: $margin;
+             background-color:$main_text_color_light_gray;
+             > UILabel[buttonLabel] {
+                margin-left:$margin;
+                font: $font_medium;
+                size:$screen_full_width*.3 25;
+                text-color:$main_text_color_black;
+             }
+       }
+       HYBCustButton.collapsed {
+           size:$screen_full_width*.96 0;
+       }
+       HYBCustButton.expanded {
+           size:$screen_full_width*.96 50;
+       }
+    }
+    UITableView.swapCollapsed, UICollectionView.swapCollapsed {
+        size: $screen_full_width 0;
+    }
+    UITableView.swapExpanded, UICollectionView.swapExpanded {
+        size: $screen_full_width 945;
+    }
+    UICollectionView.productsGrid {
+        background-color: $main_background_very_light;
+        margin-top: 0;
+    }
+    HYBCollectionViewCell {
+        background-color: $main_background_transparent;
+    }
+    UITableView.productsTable {
+        margin-top: 0;
+        background-color:main_background_very_light;
+    }
+   HYBListViewCell {
+       background-color:$main_background_transparent;
+       UIButton {
+           background-color:$main_background_transparent;
+           title-color:[state:normal] $main_text_color_primary;
+       }
+       UILabel.inStock {
+          text-color:$main_color_green;
+       }
+       UILabel.lowStock {
+          text-color:$main_color_red;
+       }
+       UILabel.outOfStock {
+          text-color:$main_color_red;
+       }
+   }
+}
+
+UIView.expanded {
+    background-color:$main_background_secondary;
+    UILabel {
+        text-color:$text_field_font_color;
+    }
+}
+
+UIView.collapsed {
+    background-color:$main_background_transparent;
+}
+
+UIButton.expanded {
+    background-color:$main_background_secondary;
+}
+
+UILabel.expanded {
+    background-color:$main_background_secondary;
+}
+
+UIView.panel {
+    size: $component_full_width $component_height;
+    margin-top: $margin;
+    margin-left:$margin;
+}
+
+HYBLoginView {
+    UIImageView {
+        size: $component_width 184;
+        margin-top: $component_height * 4;
+    }
+}
+
+HYBCartView {
+   background-color: $main_background_very_light;
+   UIView.panel {
+       size: $screen_full_width*0.8 $component_height;
+       margin-top: 10;
+       margin-left:$margin;
+   }
+   UILabel.textLabel {
+       size: $screen_full_width*0.8*0.5 20;
+       margin-top: 6;
+       text-color: $main_background_black;
+       background-color: $main_background_very_light;
+   }
+   UILabel.alignRight {
+        size: $screen_full_width*0.8*0.3 20;
+        text-alignment: right;
+   }
+   UILabel.alignLeft {
+       margin-left:6;
+   }
+   UIView.buttonsPanel {
+        size: $screen_full_width*0.8 80;
+        margin-top: 0;
+        background-color:$white;
+
+        HYBCustButton.checkoutButton {
+            size:$screen_full_width*0.8*0.5 80;
+            label @{
+                margin-left:$margin;
+                font: $font_small;
+                size:$screen_full_width*.5 25;
+            }
+        }
+        HYBCustButton.enabled {
+            background-color:$button_background_color_primary;
+            label @{
+                text-color:$main_text_color_primary;
+            }
+        }
+        HYBCustButton.disabled {
+            background-color:$main_background_light;
+            label @{
+                text-color:$main_text_color_light_gray;
+            }
+        }
+        UIButton.continueShoppingButton {
+            size:$screen_full_width*0.8*0.5 80;
+            background-color: $main_background_dark;
+            title-color:[state:normal] $main_background_strong_dark;
+        }
+   }
+   UILabel.titleLabel {
+        size: $screen_full_width*0.8 $component_height;
+        margin-top: 20;
+        margin-left:$margin;
+        font: $font_large;
+        background-color:$main_background_very_light;
+   }
+   UIView.totalsPanel {
+        size: $screen_full_width*0.8 140;
+        background-color:$main_background_very_light;
+        margin-top:5;
+        UIView.totalsLabelsPanel {
+            margin-left: $margin;
+            size: $screen_full_width*0.8*0.5 140;
+            background-color:$main_background_very_light;
+            UILabel.cartTotalLabel {
+                font: $font_medium_bold;
+            }
+            UILabel.savingsLabel {
+                text-color: $green;
+            }
+        }
+        UIView.totalsNumbersPanel {
+            margin-left: $margin;
+            size: $screen_full_width*0.8*0.4 140;
+            background-color:$main_background_very_light;
+            UILabel.cartTotalNumber {
+                font: $font_medium_bold;
+            }
+            UILabel.savingsNumber {
+                text-color: $green;
+            }
+            UILabel.discountsMessage {
+                size: 350 20;
+                font: $font_small_italic;
+                margin-right: 0;
+                margin-bottom: 20;
+                text-color:$main_color_green
+            }
+        }
+   }
+   UIView.itemsPanelHeader {
+        size: $screen_full_width*0.8 30;
+        background-color:$main_background_dark;
+        margin-top:40;
+        UILabel.headerLabel {
+            size: 100 20;
+            margin-top: $margin;
+            margin-left:$margin;
+            text-color: $main_background_transparent;
+            background-color: $main_background_dark;
+            font: $font_small
+        }
+        UILabel.items {
+          margin-left: 20;
+        }
+        UILabel.qty {
+          margin-left: 300;
+        }
+        UILabel.total {
+          margin-left: 10;
+        }
+   }
+   UIView.itemsPanelInfoBox {
+        size: $screen_full_width*0.75 50;
+        background-color:$main_background_very_light;
+        UIImageView.infoIcon {
+          margin-left: 28;
+          size: 50 50;
+        }
+        UILabel.infoLabel {
+          margin-left: 43;
+          font:$font_medium_italic;
+        }
+        UILabel.hideInfoButton {
+          margin-left: 100;
+          font:$font_medium;
+        }
+        HYBCustButton.batchToggleButton {
+            size: 120 45;
+            margin-left: 50;
+            background-color:$main_background_very_light;
+        }
+   }
+
+   UITableView.itemsTable {
+        size: $screen_full_width*0.8 517;
+        background-color: $main_background_very_light;
+        separatorColor:$main_background_very_light;
+        HYBCartItemCellView {
+           background-color: $main_background_transparent;
+        }
+   }
+   
+   UIView.batchDeletePanel {
+        background-color:$main_background_very_light;
+        size: $screen_full_width*0.8 $component_height;
+        margin-top: 5;
+
+        HYBCustButton.batchSelectButton {
+            margin-top :0;
+            size: 120 30;
+            margin-left: $margin;
+        }
+        HYBCustButton.batchDeleteButton {
+            size: 150 30;
+            margin-left: $margin*20;
+        }
+   }
+}
+
+HYBProductDetailsView {
+    background-color: $panel_background_color_secondary;
+    UIView.titlePanel {
+        margin-top: 110;
+    }
+    UIScrollView.masterScrollView {
+        size: 768 1024;
+        background-color:$main_background_transparent;
+    }
+    UIView.titleDetailsPanel {
+        size: $component_full_width-$component_height $component_height;
+        margin-top: $margin;
+        background-color:$main_background_transparent;
+    }
+    UIImageView.closeIcon {
+        size: 40 40;
+    }
+    UILabel.name {
+        margin-top: 5;
+    }
+    UILabel.code {
+        margin-top: 3;
+    }
+    UIScrollView.imagesScroll {
+        size: $component_full_width*.75 250;
+        margin-top: $margin;
+    }
+    UIPageControl.imagesScrollControl {
+        size: $component_full_width 30;
+        margin-top: $margin;
+        background-color: $main_background_transparent;
+        pageIndicatorTintColor: $main_background_dark;
+        currentPageIndicatorTintColor: $label_font_color;
+    }
+    UITextView.summary {
+        size: $component_full_width $component_height;
+        margin-top: $margin;
+        margin-left:0;
+        text-color: $label_font_color;
+        background-color: $main_background_transparent;
+    }
+    UILabel.productPriceLabel {
+        size: 140 $component_height;
+    }
+    UILabel.productPriceLabelSeparator {
+       size: 5 $component_height;
+    }
+    UIView.collapsedPriceMatrix {
+        size: $component_full_width 0;
+        margin-top: $margin;
+        margin-left:$margin;
+        layer @{
+           zPosition: 100;
+        }
+    }
+    UIView.expandedPriceMatrix {
+        size: $component_full_width 100;
+        margin-top: 0;
+        margin-left:$margin;
+    }
+    UILabel.availabilityLabel {
+        size:180 $component_height;
+        margin-left:60;
+    }
+    UILabel.quantityLabel {
+        size: $component_height $component_height;
+        margin-left:10;
+    }
+    UITextField.quantityInputField {
+        size:100 $component_height;
+        margin-left:5;
+    }
+    UIButton.addToCartButton {
+        size: $component_full_width $component_height;
+    }
+    UITableView.tabsTable {
+        size: $component_full_width 300;
+        margin-top: $margin;
+        margin-left:0;
+        background-color:$main_background_transparent;
+    }
+    UITableViewCell.tabsTableCell  {
+        background-color:$main_background_secondary;
+    }
+    UIView.volumePricingPanelRow {
+       size: $component_full_width 35;
+       margin-top: 0;
+       margin-left:50;
+    }
+    UIView.verticalSeparator {
+       size: 2 35;
+       margin-top: 0;
+       margin-left:5;
+       background-color:$main_background_dark;
+    }
+    UILabel.volumePricingCellLabel {
+       size: 100 20
+       margin-top: 0;
+       margin-left:60;
+       text-color: $label_font_color;
+       background-color:$main_background_secondary;
+    }
+}
+
+HYBCheckoutView {
+   background-color: $main_background_transparent;
+
+    UILabel.alignRight {
+       margin-right:-140;
+    }
+    UILabel.alignLeft {
+       margin-left:6;
+    }
+
+   UILabel.titleLabel {
+        size: $screen_full_width*.965 $component_height*.9;
+        margin-top: 80;
+        font: $font_title;
+        text-color:$main_text_color_primary;
+   }
+   UILabel.subTitleLabel {
+        size: $screen_full_width*.965 $component_height*.6;
+        margin-top: 0;
+        margin-left:$margin;
+        font: $font_subTitle;
+   }
+   UILabel.subSubTitleLabel {
+        size: $screen_full_width*.965 $component_height*.4;
+        margin-top: $margin*.4;
+        margin-left:$margin;
+        font: $font_subSubTitle;
+   }
+   UIView.paymentPanel {
+        size: $screen_full_width $component_height*2.6;
+   }
+   UIView.paymentAccountPanel {
+        size: $screen_full_width*.965 $component_height;
+   }
+
+   UIView.paymentPONumberPanel {
+        size: $screen_full_width*.965 $dropdown_button_height*1.1;
+        margin-right:$margin;
+   }
+   UIButton.paymentQuestionMarkButton {
+        size: 32 32;
+        margin-left: 20;
+        background-color: $main_background_dark;
+        title-color:$main_text_color_white;
+   }
+  UITextField.paymentPONumberField {
+        size: $screen_full_width*.925 $dropdown_button_height*1.1;
+        margin-top: $margin;
+        margin-left:$margin;
+   }
+
+   UIView.costCenterPanel {
+        size: $screen_full_width $component_height*1.8;
+   }
+
+   HYBCustButton.dropdownButton {
+        size: $screen_full_width*.965 $dropdown_button_height*1.1;
+        margin-top: $margin;
+        margin-left: $margin;
+        layer: @{
+            border-width:1;
+            border-color:$main_background_dark;
+        }
+    }
+    
+    HYBCustButton.paymentAccountButton {
+        margin-left: 0;
+        size: $screen_full_width*.85 $dropdown_button_height*1.1;
+        background-color:$main_background_very_light;
+        label @{
+            text-color:$main_text_color_light_gray;
+        }
+    }
+
+   UIView.deliveryPanel {
+        size: $screen_full_width $component_height*3.7;
+   }
+
+    UIView.hilite {
+        layer: @{
+            border-width:2;
+            border-color:$main_color_red;
+        }
+    }
+
+    UIView.lolite {
+        layer: @{
+            border-width:0;
+        }
+    }
+
+   UIView.agreementPanel {
+        margin-top:     $margin*.9;
+        margin-left:    20;
+        size: $screen_full_width*.965 $component_height;
+        background-color:$main_background_very_light;
+   }
+   
+   UIButton.agreementButton {
+        size: 24 24;
+        margin-left: $margin;
+        background-color: $main_background_dark;
+        title-color:$main_text_color_white;
+   }
+
+   UILabel.agreementLabel {
+        margin-left: $margin;
+        size: $screen_full_width*.29 $component_height*.5;
+        font: $font_small;
+        text-color: $main_text_color_gray;
+   }
+   UILabel.agreementLink {
+        size: $screen_full_width*.2 $component_height*.5;
+        font: $font_small;
+        text-color: $main_text_color_primary;
+   }
+   UILabel.agreementConfirmation {
+        size: $screen_full_width*.965 $component_height*.6;
+        font: $font_small;
+        text-color: $main_color_red;
+        margin-left:$margin;
+   }
+   UIButton.orderButton {
+        margin-top:     $margin*1.1;
+        margin-left:    20;
+        size: $screen_full_width*.965 $component_height;
+        background-color:$button_background_color_primary;
+        title-color:[state:normal] $main_text_color_primary;
+   }
+   
+   UIView.orderSummaryView {
+        margin-top:     $margin*1.5;
+        background-color: $main_background_very_light;
+        size: $screen_full_width $component_height*4;
+   }
+   UIView.orderSummaryPanel {
+        margin-top:     $margin*1.5;
+        background-color: $main_background_very_light;
+        size: $screen_full_width $component_height*3.4;
+   }
+   UIView.orderListPanel {
+        margin-top:     0;
+        background-color: $main_background_very_light;
+        size: $screen_full_width $component_height*4;
+   }
+   UIView.orderSummaryUpperPanel {
+        margin-top:     $margin;
+        size: $screen_full_width*.95 $component_height*2.4;
+   }
+   UIView.orderSummaryTotalPanel {
+        margin-top:     0;
+        margin-left:    40;
+        size: $screen_full_width*.37 $component_height*2.4;
+   }
+   UILabel.orderSummaryTitle {
+        margin-top:     6;
+        size: $screen_full_width*.37 24;
+        text-color: $main_text_color_gray;
+        font:HelveticaNeue-Thin 26;
+   }
+   UILabel.orderSummaryItemCount {
+        margin-top:     6;
+        size: $screen_full_width*.37 42;
+        text-color: $main_text_color_gray;
+        font:HelveticaNeue-Thin 38;
+   }
+   
+   UIView.orderSummaryBaseLinePanel {
+        size: $screen_full_width*.45 $component_height*.47;
+        text-color: $main_text_color_gray;
+        UILabel.orderSummaryBaseLineTitle {
+            size: $screen_full_width*.2 20;
+        }
+        UILabel.orderSummaryBaseLineValue {
+            text-alignment: right;
+            size: $screen_full_width*.25 20;
+        }
+   }
+
+   UILabel.orderSummarySavings {
+        text-color: $green;
+   }
+   UILabel.orderSummaryTotal {
+        font:HelveticaNeue 20;
+   }
+
+   UIView.orderSummarySumPanel {
+        margin-top:     0;
+        size: $screen_full_width*.45 $component_height*2.4;
+   }
+   UIView.orderSummarySavingsRecapPanel {
+        margin-top:     0;
+        size: $screen_full_width*.95 $component_height*.5;
+   }
+   UILabel.orderSummarySavingsRecapTitle {
+        text-alignment: right;
+        size: $screen_full_width*.87 $component_height*.5;
+        text-color: $main_text_color_gray;
+        font:HelveticaNeue-Italic 17;
+        text-color: $green;
+   }
+
+}
+
+HYBOrderConfirmationView {
+   background-color: $main_background_transparent;
+
+   UIButton.continueShoppingButton {
+        margin-top: $margin*7;
+        size: $screen_full_width*.85 $component_height;
+        background-color:$main_background_very_light;
+        title-color:[state:normal] $main_text_color_primary;
+   }
+
+   UILabel.thanksLabel {
+        margin-top: $margin;
+        size: $screen_full_width*.85 $component_height;
+        text-color: $main_text_color_gray;
+        font:HelveticaNeue 34;
+   }
+   UILabel.orderNumberIntroLabel {
+        size: $screen_full_width*.23 $component_height*.5;
+        text-color: $main_text_color_gray;
+        font:$font_medium;
+   }
+   UIView.orderNumberPanel {
+        margin-top:     $margin;
+        margin-left:    40;
+        size: $screen_full_width*.85 $component_height*.5;
+   }
+   UILabel.orderNumberLinkLabel {
+        size: $screen_full_width*.85 $component_height*.5;
+        text-color: $main_text_color_primary;
+        font:$font_medium;
+   }
+   UILabel.emailDetailsLabel {
+        margin-top:     $margin;
+        size: $screen_full_width*.85 $component_height*.5;
+        text-color: $main_text_color_gray;
+        font:$font_medium;
+   }
+   UIView.deliveryMainPanel {
+        margin-top:$margin;
+        size: $screen_full_width*.85 $component_height*2;
+   }
+   UIView.deliveryAddressPanel {
+        size: $screen_full_width*.4 $component_height*2;
+   }
+   UIView.deliveryMethodPanel {
+        margin-left: $margin*3;
+        size: $screen_full_width*.4 $component_height*2;
+   }
+   UILabel.deliveryAddressTitle, UILabel.deliveryMethodTitle {
+        margin-top:0;
+        size: $screen_full_width*.4 $component_height;
+        text-color: $main_text_color_gray;
+        font:HelveticaNeue-Medium 16;
+   }
+   UILabel.deliveryAddressValue, UILabel.deliveryMethodValue {
+        margin-top:0;
+        size: $screen_full_width*.4 $component_height * 1;
+        text-color: $main_text_color_gray;
+        font:HelveticaNeue 16;
+   }
+   UILabel.deliveryMethodValue {
+        margin-top:-18;
+   }
+   UIView.orderSummaryView {
+        margin-top:     $margin;
+        background-color: $main_background_very_light;
+        size: $screen_full_width $component_height*4;
+   }
+   UITableView.itemsTable {
+        margin-top:$margin*15;
+        size: $screen_full_width 350;
+        background-color: $main_background_very_light;
+        separatorColor:$main_background_very_light;
+        HYBCartItemCellView {
+           background-color: $main_background_transparent;
+        }
+   }
+}

@@ -1,0 +1,8 @@
+include ':hybris Mobile B2B Library'
+include ':hybris Mobile B2B Library:tests'
+include ':hybris Mobile HTTP Client Library'
+include ':hybris Mobile HTTP Client Library:tests'
+include ':hybris Mobile UI Library'
+include ':hybris Mobile UI Library:tests'
+include ':hybris Mobile B2B App'
+include ':hybris Mobile B2B App:tests'

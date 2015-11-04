@@ -1,0 +1,1 @@
+PODS_GRKGRADIENTVIEW_OTHER_LDFLAGS = -framework "CoreGraphics"

@@ -1,0 +1,31 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.1'
+
+pod 'AutoNSCoding'
+pod 'CocoaLumberjack', '~> 1.8.0'
+pod 'MKNetworkKit'
+pod 'UIImage+Dummy'
+pod 'MMDrawerController', '~> 0.5.3'
+pod 'BlocksKit'
+pod 'OLGhostAlertView', '~> 1.7'
+pod 'ColorUtils'
+pod 'Masonry'
+pod 'Classy', :git => 'https://github.com/cloudkite/Classy.git', :commit => '00c05095d3'
+pod 'ClassyLiveLayout'
+pod 'GRKGradientView'
+pod 'DProperty'
+pod 'BBBadgeBarButtonItem'
+pod 'RMMapper'
+pod 'Mantle'
+
+target :UnitTests, :exclusive => true do
+    pod 'Specta'
+    pod 'Expecta'
+    pod 'OCMock'
+end
+
+post_install do | installer |
+    installer.project.build_configurations.each do |config|
+        config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+    end
+end

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_categories">1</string>
+    <string name="url_backend">https://dev-b2bmobile-3.yrdrt.fra.hybris.com:9002</string>
+    <string name="url_token">https://dev-b2bmobile-3.yrdrt.fra.hybris.com:9002/rest/oauth/token</string>
+    <string name="path_webservice">/rest/v2</string>
+    <string name="path_webservice_catalog">/powertools</string>
+    <string name="path_product_details">/products/%1$s?fields=FULL</string>
+    <string name="path_products">/categories/%1$s/products?fields=FULL&amp;</string>
+    <string name="path_catalogs">/catalogs/powertoolsProductCatalog/Online/categories/%1$s?options=CATEGORIES,SUBCATEGORIES</string>
+    <string name="path_add_to_cart">/users/%1$s/carts/%2$s/entries</string>
+    <string name="path_update_delete_cart_entry">/users/%1$s/carts/%2$s/entries/%3$s</string>
+    <string name="path_carts_current">/users/%1$s/carts/current</string>
+    <string name="path_carts">/users/%1$s/carts</string>
+    <string name="path_cart">/users/%1$s/carts/%2$s?fields=FULL</string>
+    <string name="path_delivery_modes">/users/%1$s/carts/%2$s/deliverymodes</string>
+    <string name="path_cost_center">/costcenters</string>
+    <string name="path_cart_cost_center">/users/%1$s/carts/%2$s/costcenter</string>    
+    <string name="path_cart_delivery_mode">/users/%1$s/carts/%2$s/deliverymode</string>
+    <string name="path_cart_delivery_address">/users/%1$s/carts/%2$s/addresses/delivery</string>
+    <string name="path_cart_payment_type">/users/%1$s/carts/%2$s/paymenttype</string>
+    <string name="path_place_order">/users/%1$s/orders</string>
+    <string name="path_order_details">/users/%1$s/orders/%2$s?fields=FULL</string>
+    <string name="link_storefront">http://dev-b2bmobile-3.yrdrt.fra.hybris.com:9001/yb2bacceleratorstorefront/?site=powertools</string>
+    <string name="name_storefront">POWERTOOLS</string>
+    <string name="payment_type_account_name">ACCOUNT</string>
+    <string name="intent_action_logout">com.hybris.mobile.intent.action.logout</string>
+</resources>
