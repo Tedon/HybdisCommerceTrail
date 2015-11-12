@@ -1,1 +1,0 @@
-java -server -Xmx512M -jar -Dsolr.solr.home=. start.jar

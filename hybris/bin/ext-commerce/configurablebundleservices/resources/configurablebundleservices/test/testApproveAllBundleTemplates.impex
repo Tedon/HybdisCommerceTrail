@@ -1,3 +1,0 @@
-# set all BundleTemplates in approved status
-UPDATE BundleTemplateStatus[batchmode=true];itemtype(code)[unique=true];status(code)
-;BundleTemplateStatus;approved

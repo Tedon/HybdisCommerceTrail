@@ -1,8 +1,0 @@
-#Ant properties
-#Fri Mar 27 08:33:39 CET 2015
-builddate=20150327 0833
-description=corepluscommons
-name=corepluscommons
-vendor=hybris
-version=5.4.0.2
-version.api=5.4.0

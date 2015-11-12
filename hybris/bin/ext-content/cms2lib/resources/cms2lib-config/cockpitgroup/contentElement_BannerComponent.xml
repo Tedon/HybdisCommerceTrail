@@ -1,4 +1,0 @@
-<content-elements>
-	<content-element type="BannerComponent" name="type.bannercomponent.name" description="type.bannercomponent.description"
-		image="cmscockpit/images/ContentElementBanner.gif" refImage="cmscockpit/images/ContentElementBannerReference.gif" imageSmall="cmscockpit/images/ContentElementBannerSmall.gif" />
-</content-elements>	

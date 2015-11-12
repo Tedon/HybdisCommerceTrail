@@ -1,9 +1,0 @@
-#  -------------------------------------------------------
-"#% impex.setValidationMode( ""export_only"" )"
-"#% impex.setLocale( new Locale( ""de"" , """" ) )"
-#  -------------------------------------------------------
-
-# ---- Extension: core ---- Type: Product ----
-"#% impex.setTargetFile( ""Product.csv"" , false )"
-insert_update Product;pk[unique=true]; code;
-"#% impex.exportItems( ""Product"" , false )"

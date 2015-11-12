@@ -1,9 +1,0 @@
-#Ant properties
-#Thu Apr 23 12:25:48 CEST 2015
-builddate=20150423 1225
-description=promotions
-name=promotions
-releasedate=20150413 1703
-vendor=hybris
-version=5.4.0.2
-version.api=5.4.0

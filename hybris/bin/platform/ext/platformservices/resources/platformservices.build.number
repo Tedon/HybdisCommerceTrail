@@ -1,8 +1,0 @@
-#Ant properties
-#Wed Aug 05 15:12:27 CEST 2015
-builddate=20150805 1512
-description=platformservices
-name=platformservices
-vendor=hybris
-version=5.4.0.5
-version.api=5.4.0

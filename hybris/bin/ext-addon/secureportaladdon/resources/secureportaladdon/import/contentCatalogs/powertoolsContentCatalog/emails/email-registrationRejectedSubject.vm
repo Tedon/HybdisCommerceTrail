@@ -1,2 +1,0 @@
-## messageSource=classpath:/secureportaladdon/messages/email-registrationApproved_$lang.properties
-${ctx.messages.subject}

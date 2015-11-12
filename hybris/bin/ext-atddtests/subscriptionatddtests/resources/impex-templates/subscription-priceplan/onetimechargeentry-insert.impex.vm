@@ -1,7 +1,0 @@
-#parse( "impex-templates/common-macros.impex.vm" )
-#[[
-
-INSERT OneTimeChargeEntry;id[unique=true];subscriptionPricePlanOneTime(name[lang=$lang, unique=true]);price;$catalogversion;billingEvent(code)
-
-]]#
-;${pricePlanName}_${billingEventCode};${pricePlanName};${price};;${billingEventCode}

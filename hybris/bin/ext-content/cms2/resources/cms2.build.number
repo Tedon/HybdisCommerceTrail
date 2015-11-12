@@ -1,9 +1,0 @@
-#Ant properties
-#Mon Dec 08 22:53:09 CET 2014
-builddate=20141208 2253
-description=cms2
-name=cms2
-releasedate=20141113 1921
-vendor=hybris
-version=5.4.0.0
-version.api=5.4.0

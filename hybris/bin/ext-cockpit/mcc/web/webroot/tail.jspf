@@ -1,3 +1,0 @@
-<%
-JaloSession.deactivate();
-%>

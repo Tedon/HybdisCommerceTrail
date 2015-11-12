@@ -1,1 +1,0 @@
-return java.lang.Boolean.valueOf((user.getPaymentInfos() == null) ? true :  user.getPaymentInfos().isEmpty())

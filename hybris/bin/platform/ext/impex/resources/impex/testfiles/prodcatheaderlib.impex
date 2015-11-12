@@ -1,2 +1,0 @@
-Country; PK; isocode[unique=true] 
-Product; PK; code[unique=true] 

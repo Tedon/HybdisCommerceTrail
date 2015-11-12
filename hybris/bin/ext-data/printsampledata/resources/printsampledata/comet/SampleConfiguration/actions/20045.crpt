@@ -1,7 +1,0 @@
-/*
- * empty test script
- */
-int main()
-{
-	return 0;
-}

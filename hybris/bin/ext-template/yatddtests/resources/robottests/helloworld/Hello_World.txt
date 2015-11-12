@@ -1,7 +1,0 @@
-*** Settings ***
-#Resource          impex/Impex_Keywords.txt
-
-*** Test Cases ***
-Test_Hello_World
-    [Documentation]    Simple greeter test
-    log    Hello Robot World!    WARN

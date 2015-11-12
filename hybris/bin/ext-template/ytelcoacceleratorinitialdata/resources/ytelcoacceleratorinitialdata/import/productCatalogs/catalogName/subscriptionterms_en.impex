@@ -1,6 +1,0 @@
-# Impex for Subscription Terms - en
-
-# Macros / Replacement Parameter definitions
-$lang=en
-
-UPDATE SubscriptionTerm;id[unique=true];name[lang=$lang]

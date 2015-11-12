@@ -1,3 +1,0 @@
-UPDATE UserGroup;UID[unique=true];groups(uid)[mode=append]
-;printgroup;cockpitgroup
-;printgroup;employeegroup

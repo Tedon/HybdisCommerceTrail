@@ -1,5 +1,0 @@
-INSERT_UPDATE Title;code[unique=true]
-"#%bsh% beforeEach:
-   line.clear();
-";
-;foo

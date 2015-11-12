@@ -1,3 +1,0 @@
-# ImpEx for Subscription Terms
-
-INSERT_UPDATE SubscriptionTerm;id[unique=true];termOfServiceFrequency(code);termOfServiceNumber(code);termOfServiceRenewal(code);billingPlan(id);cancellable

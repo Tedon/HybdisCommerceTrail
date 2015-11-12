@@ -1,1 +1,0 @@
-Currency.money_format["EUR"] = "{{amount}} &euro;";

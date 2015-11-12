@@ -1,9 +1,0 @@
-#Ant properties
-#Tue Jan 20 06:59:35 CET 2015
-builddate=20150120 0659
-description=commercesearchbackoffice
-name=commercesearchbackoffice
-releasedate=20141219 1328
-vendor=hybris
-version=5.4.0.0
-version.api=5.4.0
