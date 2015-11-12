@@ -1,7 +1,13 @@
 hybris/bin/platform/*
+hybris/bin/ext-*
 hybris/log/*
 hybris/temp/*
+hybris/config/*
 hybris-*
+licenses/*
+Mobile-Commerce-SDK/*
+RemoteSystemsTempFiles/*
+__MACOSX/*
 *.class
 gensrc
 velocity.log
