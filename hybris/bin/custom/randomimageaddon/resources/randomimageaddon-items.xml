@@ -59,6 +59,33 @@
                 </attribute>
             </attributes>
         </itemtype>
+        
+        <itemtype code="MyParagraphComponent" autocreate="true" generate="true" extends="CMSParagraphComponent">
+            <attributes>
+                <attribute type="int" qualifier="price">
+                    <modifiers read="true" write="true" search="true" optional="false" />
+                    <defaultvalue>Integer.valueOf(0)</defaultvalue>
+                    <persistence type="property" />
+                </attribute>
+                <attribute type="localized:java.lang.String" qualifier="customerName">
+                    <modifiers read="true" write="true" search="true" optional="false" />
+                    <persistence type="property" />
+                </attribute>
+                <attribute type="localized:java.lang.String" qualifier="description">
+                    <modifiers read="true" write="true" search="true" optional="true" />
+                    <persistence type="property" />
+                </attribute>
+            </attributes>
+        </itemtype>
+        
+        <itemtype code="MyCmsLinkComponent" autocreate="true" generate="true" extends="CmsLinkComponent">
+            <attributes>
+                <attribute type="localized:java.lang.String" qualifier="linkText">
+                    <modifiers read="true" write="true" search="true" optional="false" />
+                    <persistence type="property" />
+                </attribute>
+            </attributes>
+        </itemtype>
 <!--
 		<itemtype generate="true"
 		   code="MyProduct"

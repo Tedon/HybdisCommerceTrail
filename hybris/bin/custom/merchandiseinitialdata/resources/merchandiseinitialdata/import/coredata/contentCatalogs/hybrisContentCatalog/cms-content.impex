@@ -1,17 +1,22 @@
 #
 # Import the CMS content for the Merchandise site
 #
+$lang=en
 $prefix=hybris
 $contentCatalog=$prefixContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$wideContent=CMSImageComponent,BannerComponent,CMSParagraphComponent,RandomImageParagraphComponent,MyParagraphComponent,MyCmsLinkComponent
+$narrowContent=ProductFeatureComponent,CategoryFeatureComponent,CMSImageComponent,SimpleBannerComponent,BannerComponent,ImageMapComponent,RotatingImagesComponent,ProductCarouselComponent,CMSParagraphComponent,RandomImageParagraphComponent,MyParagraphComponent,MyCmsLinkComponent
+
 # Import modulegen config properties into impex macros
 UPDATE GenericItem[processor=de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor];pk[unique=true]
-$jarResourceCms=$config-jarResourceCmsValue
+$jarResourceCms=jar:de.hybris.merchandise.core.setup.CoreSystemSetup&/merchandisecore/import/cockpits/cmscockpit
 # Create PageTemplates
 # These define the layout for pages
 # "FrontendTemplateName" is used to define the JSP that should be used to render the page for pages with multiple possible layouts.
 # "RestrictedPageTypes" is used to restrict templates to page types
 INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+;;ContentPage2Template;Content Page 2 Template;layout/contentLayout2Page;ContentPage
 ;;ProductDetailsPageTemplate;Product Details Page Template;product/productLayout2Page;ProductPage
 ;;ProductListPageTemplate;Product List Page Template;category/productListPage;CategoryPage
 ;;ProductGridPageTemplate;Product Grid Page Template;category/productGridPage;CategoryPage
@@ -38,6 +43,7 @@ INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;fronten
 # Add Velocity templates that are in the CMS Cockpit. These give a better layout for editing pages
 # The FileLoaderValueTranslator loads a File into a String property. The templates could also be inserted in-line in this file.
 UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+;;ContentPage2Template;$jarResourceCms/structure-view/structure_ContentPage2Template.vm
 ;;ProductDetailsPageTemplate;$jarResourceCms/structure-view/structure_productDetails2PageTemplate.vm
 ;;ProductListPageTemplate   ;$jarResourceCms/structure-view/structure_productListPageTemplate.vm
 ;;ProductGridPageTemplate   ;$jarResourceCms/structure-view/structure_productGridPageTemplate.vm
@@ -67,6 +73,12 @@ INSERT_UPDATE RandomImageParagraphComponent;$contentCV[unique=true];uid[unique=t
 ;;RandomImage1;Random Image;RandomImage1;fashion;228;228
 ;;RandomImage2;Random Image;RandomImage2;people;228;228
 ;;RandomImage3;Random Image;RandomImage3;nightlife;228;228
+## NEW CMS COMPONENT - MY PARAGRAPH
+INSERT_UPDATE MyParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;price;customerName;description
+;;MyParagraph1;My Paragraph 1;MyParagraph1;50;Jessy;Description text 1
+## NEW CMS COMPONENT - MY CMS LINK
+INSERT_UPDATE MyCmsLinkComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;linkText
+;;MyCmsLink1;My CmsLink 1;MyCmsLink1;Text for cms link 1
 ## Adding localized content to the new CMS components
 UPDATE RandomImageParagraphComponent;$contentCV[unique=true];uid[unique=true];text[lang=$lang]
 ;;RandomImage1;Fashion
@@ -77,6 +89,16 @@ UPDATE RandomImageParagraphComponent;$contentCV[unique=true];uid[unique=true];te
 # Each PageTemplate has a number of ContentSlotNames, with a list of valid components for the slot.
 # There are a standard set of slots and a number of specific slots for each template.
 # Standard slots are SiteLogo, HeaderLinks, MiniCart and NavigationBar (that all appear in the Header), and the Footer.
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='ContentPage2Template'];validComponentTypes(code)
+;SiteLogo;;CMSImageComponent,BannerComponent
+;HeaderLinks;;CMSLinkComponent,CMSParagraphComponent
+;MiniCart;;MiniCartComponent
+;NavigationBar;;NavigationBarComponent
+;Section1;;$wideContent
+;Section2;;$wideContent
+;Section3;;$narrowContent
+;LinkSection;;MyCmsLinkComponent
+;Footer;;CMSLinkComponent,CMSParagraphComponent,FooterComponent
 # Error Page Template
 INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='LandingPage2Template'];validComponentTypes(code);compTypeGroup(code)
 ;Section2A;;RandomImageParagraphComponent;narrow
@@ -413,9 +435,10 @@ INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=
  
 # Create Content Slots
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;RandomImage1
-;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;RandomImage2
-;;Section2CSlot-Homepage;Section2C Slot for Homepage;true;RandomImage3
+;;LinkSectionSlot-myContentPage;Cms Link Slot for MyContentPage;true;MyCmsLink1
+;;Section1Slot-myContentPage;Section 1 for MyContentPage;true;RandomImage1
+;;Section2Slot-myContentPage;Section 2 for MyContentPage;true;RandomImage2
+;;Section3Slot-myContentPage;Section 3 for MyContentPage;true;MyParagraph1
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active
 ;;SiteLogoSlot;Default Site Logo Slot;true
 ;;HomepageNavLinkSlot;Default Homepage Link;true
@@ -449,6 +472,14 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active
 ;;CenterRightContentSlot;Center Right Content Slot;true
 ;;EmptyCartMiddleContent;Empty Cart Middle Content;true
 # Bind Content Slots to Page Templates
+INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='ContentPage2Template'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-ContentPage2;SiteLogo;;SiteLogoSlot;true
+;;HomepageLink-ContentPage2;HomepageNavLink;;HomepageNavLinkSlot;true
+;;NavigationBar-ContentPage2;NavigationBar;;NavigationBarSlot;true
+;;MiniCart-ContentPage2;MiniCart;;MiniCartSlot;true
+;;LinkSection-ContentPage2;LinkSection;;LinkSectionSlot;true
+;;Footer-ContentPage2;Footer;;FooterSlot;true
+;;HeaderLinks-ContentPage2;HeaderLinks;;HeaderLinksSlot;true
 INSERT_UPDATE ContentSlotForTemplate;$contentCV[unique=true];uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='ProductDetailsPageTemplate'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
 ;;SiteLogo-ProductDetails;SiteLogo;;SiteLogoSlot;true
 ;;HomepageLink-ProductDetails;HomepageNavLink;;HomepageNavLinkSlot;true
@@ -755,3 +786,6 @@ INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterT
 ;;productList;Product List;ProductListPageTemplate;true;
 ;;productGrid;Product Grid;ProductGridPageTemplate;false;
 ;;category;Default Category Page;CategoryPageTemplate;false;
+#Create content pages
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV)[default='ContentPage2Template'];defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false']
+;;myContentPage;MyContentPage;

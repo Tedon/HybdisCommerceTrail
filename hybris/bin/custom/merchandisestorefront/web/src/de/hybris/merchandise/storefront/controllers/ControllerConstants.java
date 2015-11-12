@@ -139,6 +139,11 @@ public interface ControllerConstants
 			{
 				String WriteReview = "pages/product/writeReview";
 			}
+			
+			interface Trail
+			{
+				String MyContentPage = "pages/trail/MyContentpage";
+			}
 		}
 
 		interface Fragments

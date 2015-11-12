@@ -41,11 +41,28 @@
 		<property name="add" ref="getRandomimageaddonBeforeViewHandler"/>
 	</bean>
 	
+	<!-- Random Image -->
 	<bean id="randomImageParagraphComponentRenderer" parent="addOnJspIncludeCMSComponentRenderer" />
        
 	<bean id="randomImageParagraphComponentRendererMapping" parent="addonCmsComponentRendererMapping">
 	        <property name="typeCode" value="RandomImageParagraphComponent" />
 	        <property name="renderer" ref="randomImageParagraphComponentRenderer" />
+	</bean>
+	
+	<!-- My Paragraph -->
+	<bean id="myParagraphComponentRenderer" parent="addOnJspIncludeCMSComponentRenderer" />
+       
+	<bean id="myParagraphComponentRendererMapping" parent="addonCmsComponentRendererMapping">
+	        <property name="typeCode" value="MyParagraphComponent" />
+	        <property name="renderer" ref="myParagraphComponentRenderer" />
+	</bean>
+	
+	<!-- My CmsLink -->
+	<bean id="myCmsLinkComponentRenderer" parent="addOnJspIncludeCMSComponentRenderer" />
+       
+	<bean id="myCmsLinkComponentRendererMapping" parent="addonCmsComponentRendererMapping">
+	        <property name="typeCode" value="MyCmsLinkComponent" />
+	        <property name="renderer" ref="myCmsLinkComponentRenderer" />
 	</bean>
 
 </beans>
